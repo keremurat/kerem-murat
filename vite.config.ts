@@ -11,7 +11,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'esbuild', // Changed from 'terser' to 'esbuild'
+    minify: true, // Use default minification (esbuild)
     rollupOptions: {
       output: {
         manualChunks: {
@@ -22,12 +22,4 @@ export default defineConfig({
     },
   },
   base: '/',
-  server: {
-    port: 3000,
-    host: true,
-  },
-  preview: {
-    port: 4173,
-    host: true,
-  },
 });
